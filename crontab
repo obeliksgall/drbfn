@@ -1,10 +1,9 @@
-# === BACKUP  TESTOWY: co 15 minut ===
-#*/5 * * * * /usr/local/bin/backup.sh >> /logs/backup.log 2>&1
+# BACKUP TESTOWY (odkomentuj jeśli potrzebujesz)
+#0/15 * * * * /usr/local/bin/backup.sh >> /logs/backup.log 2>&1
 
-# === BACKUP PRODUKCYJNY : 06:00 w Niedziele ===
-0 6 * * 7 /usr/local/bin/backup.sh >> /logs/backup.log 2>&1
+# BACKUP PRODUKCYJNY
+0 6 * * 0 /usr/local/bin/backup.sh >> /logs/backup.log 2>&1
 
-# === ROTACJA LOGOW: codziennie o 06:55 (zachowuje 7 dni) ===
+# ROTACJA LOGOW
 55 6 * * * find /logs/backup.log.* -mtime +7 -delete
 55 6 * * * mv /logs/backup.log /logs/backup.log.$(date +\%Y-\%m-\%d)
-

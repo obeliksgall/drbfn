@@ -1,0 +1,15 @@
+========================================
+Rozpoczynam sesje backupu: Wed Jul  1 18:55:00 CEST 2026
+========================================
+Backup 1...
+sending incremental file list
+
+sent 3,976 bytes  received 34 bytes  2,673.33 bytes/sec
+total size is 1,438,945  speedup is 358.84
+Backup 2...
+sending incremental file list
+
+sent 9,819 bytes  received 92 bytes  19,822.00 bytes/sec
+total size is 3,428,983  speedup is 345.98
+Backup finished: Wed Jul  1 18:55:01 CEST 2026
+========================================
