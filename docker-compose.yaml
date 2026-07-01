@@ -1,0 +1,23 @@
+services:
+  backup:
+    build: .
+    container_name: drbfntest
+    restart: unless-stopped
+    environment:
+      - TZ=Europe/Warsaw
+    volumes:
+      # Twoje ścieżki źródłowe (tylko do odczytu)
+      - /volume2/TEST/Dowyslania:/src/share1:ro
+      - /volume2/TEST/Dowyslania2:/src/share2:ro
+      
+      # MIEJSCA ZAPISU
+      - /volume2/TEST2/kat1:/backup1    # Zmieniona nazwa wewnętrzna na /backup1
+      - /volume2/TEST2/kat2:/backup2    # Dodane drugie miejsce zapisu jako /backup2
+      
+      # Folder na logi
+      - /volume1/docker/drbfn/logs:/logs
+      
+      # Skrypty i harmonogram
+      #poniżesz zakomentowane, przeniesione do Dockerfile
+      #- ./crontab:/etc/crontabs/root:ro
+      - ./backup.sh:/usr/local/bin/backup.sh:ro
