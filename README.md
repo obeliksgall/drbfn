@@ -28,12 +28,18 @@ Aby system działał poprawnie, zapisz poniższe 4 pliki w folderze `/volume1/do
    docker compose up -d --build
    ```
 
+4. Usuń kontener:
+   ```bash
+   docker compose down
+   ```
+
+
 ## ⚙️ Harmonogram i zasada działania
 
 Zadania wykonywane są całkowicie automatycznie w tle.
 
 **1. Kopia zapasowa (co 15 minut) dla TEST oraz o 06:00 w Niedzielę dla PROD**
-Skrypt `backup.sh` uruchamia się co kwadrans i wykonuje następujące operacje:
+Skrypt `backup.sh` uruchamia się `co Niedzielę o 06:00` i wykonuje następujące operacje:
 * Synchronizuje folder `/src/share1/` do miejsca zapisu `/backup2/` (fizycznie z `/volume2/TEST/Dowyslania` do `/volume2/TEST2/kat2:`).
 * Synchronizuje folder `/src/share2/` do miejsca zapisu `/backup1/` (fizycznie z `/volume2/TEST/Dowyslania2` do `/volume2/TEST2/kat1:`).
 
