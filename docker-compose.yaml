@@ -1,7 +1,7 @@
 services:
   backup:
     build: .
-    container_name: drbfntest
+    container_name: drbfn
     restart: unless-stopped
     environment:
       - TZ=Europe/Warsaw
