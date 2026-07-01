@@ -15,6 +15,7 @@ Aby system działał poprawnie, zapisz poniższe 4 pliki w folderze `/volume1/do
 1. Otwórz terminal (np. przez SSH) swojego NASa i wejdź do folderu z projektem:
    ```bash
    cd /volume1/docker/backup/
+   mkdir logs
    ```
 
 2. Nadaj uprawnienia do wykonywania dla nowego skryptu bashowego:
