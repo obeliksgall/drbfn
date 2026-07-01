@@ -21,4 +21,4 @@ services:
       #poniżesz zakomentowane, przeniesione do Dockerfile
       #- ./crontab:/etc/crontabs/root:ro
       - ./backup.sh:/usr/local/bin/backup.sh:ro
-      - ./rotate_logs.sh:/usr/local/bin/rotate_logs.sh:ro
+      
