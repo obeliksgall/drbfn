@@ -1,9 +1,8 @@
 # BACKUP TESTOWY (odkomentuj jeśli potrzebujesz)
-#0/15 * * * * /usr/local/bin/backup.sh >> /logs/backup.log 2>&1
+0/5 * * * * /usr/local/bin/backup.sh >> /logs/backup.log 2>&1
 
 # BACKUP PRODUKCYJNY
 0 6 * * 0 /usr/local/bin/backup.sh >> /logs/backup.log 2>&1
 
 # ROTACJA LOGOW
-55 6 * * * find /logs/backup.log.* -mtime +7 -delete
-55 6 * * * mv /logs/backup.log /logs/backup.log.$(date +\%Y-\%m-\%d)
+55 6 * * * /usr/local/bin/rotate_logs.sh

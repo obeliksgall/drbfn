@@ -8,6 +8,7 @@ Aby system działał poprawnie, zapisz poniższe 4 pliki w folderze `/volume1/do
 * `docker-compose.yaml` – Konfiguracja kontenera i mapowanie odpowiednich ścieżek źródłowych oraz docelowych (miejsca zapisu).
 * `Dockerfile` – Instrukcja budowy obrazu bazującego na systemie Alpine z zainstalowanym `rsync` i strefą czasową.
 * `backup.sh` – Główny skrypt wykonujący kopię zapasową z parametrami `--update`.
+* `rotate_logs.sh` – Skrypt zarządzający rotacją logów `--update`.
 * `crontab` – Harmonogram zadań wyzwalający backup oraz zarządzający rotacją logów.
 
 ## 🚀 Jak to uruchomić?
@@ -21,6 +22,7 @@ Aby system działał poprawnie, zapisz poniższe 4 pliki w folderze `/volume1/do
 2. Nadaj uprawnienia do wykonywania dla nowego skryptu bashowego:
    ```bash
    chmod +x backup.sh
+   chmod +x rotate_logs.sh
    ```
 
 3. Zbuduj i uruchom kontener w tle:
