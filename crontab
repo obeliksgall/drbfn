@@ -1,5 +1,5 @@
 # BACKUP TESTOWY (odkomentuj jeśli potrzebujesz)
-0/5 * * * * /usr/local/bin/backup.sh >> /logs/backup.log 2>&1
+*/5 * * * * /usr/local/bin/backup.sh >> /logs/backup.log 2>&1
 
 # BACKUP PRODUKCYJNY
 0 6 * * 0 /usr/local/bin/backup.sh >> /logs/backup.log 2>&1
