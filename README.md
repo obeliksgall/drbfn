@@ -33,9 +33,8 @@ Zadania wykonywane są całkowicie automatycznie w tle.
 
 **1. Kopia zapasowa (co 15 minut)**
 Skrypt `backup.sh` uruchamia się co kwadrans i wykonuje następujące operacje:
-* Synchronizuje folder `Vonsky` do miejsca zapisu `/backup1/` (fizycznie na `/volume2/backup`).
-* Synchronizuje folder `Test` do miejsca zapisu `/backup1/`.
-* Synchronizuje folder `photo` do miejsca zapisu `/backup2/` (fizycznie na `/volume3/inny_backup`).
+* Synchronizuje folder `/src/share1/` do miejsca zapisu `/backup2/` (fizycznie z `/volume2/TEST/Dowyslania` do `/volume2/TEST2/kat2:`).
+* Synchronizuje folder `/src/share2/` do miejsca zapisu `/backup1/` (fizycznie z `/volume2/TEST/Dowyslania2` do `/volume2/TEST2/kat1:`).
 
 **2. Rotacja logów (codziennie o 06:55)**
 * Wyjście ze skryptu zapisywane jest w pliku `/logs/backup.log`.
